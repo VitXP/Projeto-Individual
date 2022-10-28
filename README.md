@@ -1,2 +1,2 @@
-# Projeto-Individual-
+# Projeto-Individual
 Projeto Individual 🎮
