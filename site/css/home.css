@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.background-1 {
+    background: no-repeat;
+    background-image: url('../Img/fundo-home1.png');
+    width: 100%;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+
+}
+
+
+/*  */
+body::-webkit-scrollbar {
+    width: 1vh;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: black;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #F06414;
+    border-radius: 2vh;
+
+}
+
+
+
+
+/* Header */
+a {
+    font-family: Arial;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 15px;
+    color: #F06414;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    opacity: 0.7;
+    color: #ff5e00;
+}
+
+.logo {
+    text-transform: uppercase;
+    letter-spacing: 4px
+}
+
+.container {
+    width: 90%;
+    height: 7vh;
+    margin-left: 5%;
+    margin-top: 2vh;
+
+
+    background: linear-gradient(0deg, #FFFFFF, #FFFFFF), radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.3125) 0.01%, rgba(255, 255, 255, 0.0797606) 74.48%, rgba(255, 255, 255, 0) 100%);
+    border-radius: 20px;
+    border-radius: 10px;
+}
+
+
+nav {
+    display: flex;
+    overflow: hidden;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4vh;
+    padding: 1vh
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+
+}
+
+.nav-list li {
+    margin-left: 50px;
+
+}
+
+
+
+/* Home1 */
+
+.caixa-texto-home {
+    font-family: 'Chivo', sans-serif;
+    font-size: 30px;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 15vh;
+    margin-left: 35vh;
+}
+
+.barra1 {
+    width: 49vh;
+    height: 4px;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 3vh;
+    margin-left: 35vh;
+    background: #FFFFFF;
+    transform: matrix(1, 0, 0, -1, 0, 0);
+}
+
+.caixa-botao button {
+    font-family: 'Chivo', sans-serif;
+    margin-top: 11vh;
+    margin-left: 35vh;
+    width: 20vh;
+    height: 8vh;
+    color: #FFFFFF;
+
+    background: #F06414;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.separacao {
+    width: 100%;
+    height: 28px;
+
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), #FFFFFF;
+}
+
+/* Home-2 */
+
+.background-2 {
+    background: no-repeat;
+    background-image: url('../Img/fundo-home2.png');
+    width: 100%;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+
+}
+
+
+.centralizar-caixa1 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50vh;
+    padding: 20vh;
+
+}
+
+.caixa-1 {
+    width: 150vh;
+    height: 52vh;
+    left: 251px;
+    top: 1127px;
+
+    background: #FFFFFF;
+    border-radius: 20px;
+}
+
+.conteudo1 h1 {
+    font-family: 'Chivo', sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+    color: #F06414;
+    text-align: center;
+    padding: 5vh;
+}
+
+
+.seta {
+    width: 64vh;
+    height: 3px;
+    background: #000000;
+    transform: matrix(1, 0, 0, -1, 0, 0);
+}
+
+.centralizar-seta {
+    display: flex;
+    justify-content: center;
+}
+
+
+.conteudo1 h2 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: #000000;
+    text-align: justify;
+    padding: 2vh;
+    margin: 8vh;
+    margin-top: 4vh;
+    text-indent: 40px;
+}
+
+/* Footer */
+
+.divisao-footer {
+    width: 100%;
+    height: 66px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), #FFFFFF;
+}
+
+.centralizar {
+    display: flex;
+    justify-content: center;
+}
+
+
+.divisao-footer2 {
+    width: 529.56px;
+    height: 72px;
+    margin-top: 4vh;
+    background: #E05E13;
+}
+
+
+body{
+    background: #130F0D;
+}
+
+.divisao-footer3 {
+    width: 100%;
+    height: 15vh;
+    background: #130F0D;
+}
+
+.centralizar-logo {
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+}
+
+
+
+.footer-caixa h1 {
+    color: #FFFFFF;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 8vh;
+    margin-right: 23vh;
+}
+
+.logo-footer {
+    margin-left: 5vh;
+    height: 10vh;
+}
