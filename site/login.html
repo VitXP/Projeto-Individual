@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="Logo icon" href="./Img/controle.png">
     <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./js/login.js">
     <title>Login</title>
 </head>
 
@@ -31,41 +32,35 @@
 
         <div class="container-login">
             <div class="caixa-formulario">
-                <h1>Login</h1>
-                
-                <div class="caixa-formulario-input">
-                    <div class="campo">
-                        <label for="lab_email">Email
-                            <input type="email" placeholder="exemplo@gmail.com" id="in_email">
-                        </label>
+                <div class="texto-login">
+                    <h1>Login</h1>
+                </div>
+                <div class="formulario-center">
+                    <div class="caixa-formulario-input">
+                        <div class="campo">
+                            <label for="lab_email">Email
+                                <input type="email" placeholder="exemplo@gmail.com">
+                                <div id=" div_email"></div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="caixa-formulario-input">
+                        <div class="campo">
+                            <label for="lab_senha">Senha
+                                <input type="password" placeholder="********************************************"">
+                                <div id="div_Senha"></div>
+                            </label>
+                        </div>
                     </div>
                 </div>
-
-                <div class="caixa-formulario-input">
-                    <div class="campo">
-                        <label for="lab_senha">Senha
-                            <input type="password" placeholder="********************************************" id="in_Senha">
-                        </label>
-                    </div>
-                </div>
-
             </div>
-            <button onclick="entrar()">ENTRAR</button>
 
         </div>
+        <div class="botao-centralizar">
+            <button onclick="entrar()">ENTRAR</button>
+        </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
 
     <!-- Footer -->
     <header class="header-final">
@@ -91,3 +86,4 @@
 </body>
 
 </html>
+
