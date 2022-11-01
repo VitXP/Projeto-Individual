@@ -119,7 +119,7 @@ input {
     padding: 8px 16px;
     border-radius: 12px;
     border: unset;
-    background-color:white;
+    background-color: white;
     color: black;
 }
 
@@ -146,7 +146,7 @@ button {
     width: 20vh;
     height: 8vh;
     color: #FFFFFF;
-    
+
     background: #F06414;
     font-size: 16px;
     border: none;
@@ -159,9 +159,10 @@ button {
     justify-content: center;
     margin-top: 8vh;
 }
+
 button:hover {
     color: white;
-    box-shadow:inset 0 0 0 100px #ff5e00;
+    box-shadow: inset 0 0 0 100px #ff5e00;
 }
 
 
