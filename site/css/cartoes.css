@@ -139,7 +139,77 @@ nav {
     top: 0px;
 }
 
+.background-dva{
+    background: no-repeat;
+    background-image: url('../Img/fundo-d.png');
+    width: 100%;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+}
 
+.background-doomfist{
+    background: no-repeat;
+    background-image: url('../Img/fundo-doomfist.png');
+    width: 100%;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+}
+
+.background-echo {
+    background: no-repeat;
+    background-image: url('../Img/fundo-echo.png');
+    width: 100%;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+}
+
+.background-genji {
+    background: no-repeat;
+    background-image: url('../Img/fundo-genji.png');
+    width: 100%;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+}
+
+.background-hanzo {
+    background: no-repeat;
+    background-image: url('../Img/fundo-hanzo.png');
+    width: 100%;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+}
+
+.background-junkrat {
+    background: no-repeat;
+    background-image: url('../Img/fundo-junker.png');
+    width: 100%;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+}
+
+.background-kiriko {
+    background: no-repeat;
+    background-image: url('../Img/fundo-kiriko.png');
+    width: 100%;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+}
+
+.background-lucio {
+    background: no-repeat;
+    background-image: url('../Img/fundo-lúcio.png');
+    width: 100%;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+}
 /* Home */
 
 .caixa-texto-heroi {
