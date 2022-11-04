@@ -301,6 +301,105 @@ nav {
     left: 0px;
     top: 0px;
 }
+
+.background-sojourn {
+    background: no-repeat;
+    background-image: url('../Img/fundo-sojourn.png');
+    width: 100%;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+}
+
+.background-soldado {
+    background: no-repeat;
+    background-image: url('../Img/fundo-soldado.png');
+    width: 100%;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+}
+
+.background-sombra {
+    background: no-repeat;
+    background-image: url('../Img/fundo-sombra.png');
+    width: 100%;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+}
+
+.background-symmetra{
+    background: no-repeat;
+    background-image: url('../Img/fundo-symmetra.png');
+    width: 100%;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+}
+
+.background-torb {
+    background: no-repeat;
+    background-image: url('../Img/fundo-torbjorn.png');
+    width: 100%;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+}
+
+.background-tracer {
+    background: no-repeat;
+    background-image: url('../Img/funco-tracer.png');
+    width: 100%;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+}
+
+.background-widow {
+    background: no-repeat;
+    background-image: url('../Img/fundo-widow.png');
+    width: 100%;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+}
+
+.background-winston {
+    background: no-repeat;
+    background-image: url('../Img/fundo-winston.png');
+    width: 100%;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+}
+
+.background-wrecking {
+    background: no-repeat;
+    background-image: url('../Img/fundo-wrecking.png');
+    width: 100%;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+}
+
+.background-zarya {
+    background: no-repeat;
+    background-image: url('../Img/fundo-zarya.png');
+    width: 100%;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+}
+
+.background-zenyatta {
+    background: no-repeat;
+    background-image: url('../Img/fundo-zenyatta.png');
+    width: 100%;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+}
 /* Home */
 
 .caixa-texto-heroi {
