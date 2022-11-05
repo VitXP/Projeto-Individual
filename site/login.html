@@ -40,9 +40,10 @@
                 <div class="formulario-center">
                     <div class="caixa-formulario-input">
                         <div class="campo">
-                            <label for="lab_email">Email
-                                <input type="email" placeholder="exemplo@gmail.com">
+                            <label for="lab_email">E-mail
+                                <input type="email" placeholder="exemplo@gmail.com" id="in_email">
                                 <div id=" div_email"></div>
+                                <div id="res_ap_e" class="resultado-invalido"></div>
                             </label>
                         </div>
                     </div>
@@ -50,8 +51,9 @@
                     <div class="caixa-formulario-input">
                         <div class="campo">
                             <label for="lab_senha">Senha
-                                <input type="password" placeholder="********************************************"">
+                                <input type="password" placeholder="********************************************" id="in_senha">
                                 <div id=" div_Senha">
+                                    <div id="res_ap_s" class="resultado-invalido"></div>
                         </div>
                         </label>
                     </div>
@@ -86,6 +88,20 @@
 </body>
 
 </html>
-</body>
+<script>
+    function entrar() {
 
-</html>
+        var email = in_email.value
+        var senha = in_senha.value
+
+        if (email == "") {
+            res_ap_e.innerHTML = `E-mail Inválido`
+
+        }
+
+        if (senha == "") {
+            res_ap_s.innerHTML = `Senha Inválida`
+        }
+
+    }
+</script>

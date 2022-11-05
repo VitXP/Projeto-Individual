@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="Logo icon" href="./Img/logo-barra.png">
     <link rel="stylesheet" href="./css/cadastro.css">
-    <link rel="stylesheet" href="./js/cadastro.js">
 
     <title>Cadastro | U-Hero</title>
 </head>
@@ -43,15 +42,17 @@
                     <div class="caixa-formulario-input">
                         <div class="campo">
                             <label for="lab_apelido">Apelido
-                                <input type="text" placeholder="Herói">
+                                <input id="in_apelido" type="text" placeholder="Herói">
+                                <div id="res_ap_a" class="resultado-invalido"></div>
                             </label>
                         </div>
                     </div>
 
                     <div class="caixa-formulario-input">
                         <div class="campo">
-                            <label for="lab_email">Email
-                                <input type="email" placeholder="exemplo@gmail.com">
+                            <label for="lab_email">E-mail
+                                <input type="email" placeholder="exemplo@gmail.com" id="in_email">
+                                <div id="res_ap_e" class="resultado-invalido"></div>
                             </label>
                         </div>
                     </div>
@@ -59,57 +60,52 @@
                     <div class="caixa-formulario-input">
                         <div class="campo">
                             <label for="lab_senha">Senha
-                                <input type="password" placeholder="********************************************"">
-                        </label>
-                    </div>
-                </div>
-
-                <div class=" caixa-formulario-input">
-                                <div class="campo">
-                                    <label for="lab_confirmar-senha">Confirmar Senha
-                                        <input type="password"
-                                            placeholder="********************************************"">
-                        </label>
-                    </div>
-                </div>
-
-                <div class=" caixa-formulario-input">
-                                        <div class="campo">
-                                            <select name="" id="">
-                                                <option value=""></option>
-                                                <option value=""></option>
-                                                <option value=""></option>
-                                            </select>
-                                    </label>
-                                </div>
+                                <input type="password" placeholder="********************************************"
+                                    id="in_senha">
+                                <div id="res_ap_s" class="resultado-invalido"></div>
+                            </label>
                         </div>
-
-
-
-
-
-
                     </div>
 
+                    <div class=" caixa-formulario-input">
+                        <div class="campo">
+                            <label for="lab_confirmar-senha">Confirmar Senha
+                                <input type="password" placeholder="********************************************"
+                                    id="in_confirmar">
+                                <div id="res_ap_ss" class="resultado-invalido"></div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class=" caixa-formulario-input">
+                        <div class="campo">
+                            <label for="lab_confirmar-senha">Classe Favorita
+
+                                <select name="" id="caixa_classe" onchange="exibir()">
+                                    <option value="null"></option>
+                                    <option value="suporte">SUPORTE</option>
+                                    <option value="dano">DANO</option>
+                                    <option value="tanque">TANQUE</option>
+                                </select>
+                                <div id="res_ap_c" class="resultado-invalido"></div>
+                                <div id="resultado_imagem" class="resultado-1"></div>
+                            </label>
+                        </div>
+                    </div>
                 </div>
 
             </div>
-            <div class=" botao-centralizar">
-                <button onclick="cadastrar()">CADASTRAR</button>
-            </div>
+
+
         </div>
 
+
+        <div class=" botao-centralizar">
+            <button onclick="cadastrar()">CADASTRAR</button>
+        </div>
     </div>
 
-
-
-
-
-
-
-
-
-
+    </div>
 
 
     <!-- Footer -->
@@ -134,6 +130,56 @@
 </body>
 
 </html>
-</body>
 
 </html>
+<script>
+    function exibir() {
+        var classe = caixa_classe.value
+
+        if (classe == 'null') {
+            resultado_imagem.innerHTML = ``
+        } else if (classe == 'suporte') {
+            res_ap_c.innerHTML = ``
+            resultado_imagem.innerHTML = `<div><img src="./Img/SupportIcon.webp" alt="suporte"></div>`
+        } else if (classe == 'dano') {
+            res_ap_c.innerHTML = ``
+            resultado_imagem.innerHTML = `<div><img src="./Img/OffenseIcon.png" alt="dano"></div>`
+        } else {
+            res_ap_c.innerHTML = ``
+            resultado_imagem.innerHTML = `<div><img src="./Img/TankIcon.webp" alt="tanque"></div>`
+        }
+
+    }
+
+    function cadastrar() {
+        var apelido = in_apelido.value
+        var email = in_email.value
+        var senha = in_senha.value
+        var confirmar = in_confirmar.value
+        var classe = caixa_classe.value
+
+
+        if (apelido == "") {
+            res_ap_a.innerHTML = `Digite seu apelido`
+        }
+
+        if (email == "") {
+            res_ap_e.innerHTML = `Digite seu e-mail`
+        }
+
+
+        if (senha == "") {
+            res_ap_s.innerHTML = `Digite a sua senha`
+        }
+
+
+        if (confirmar == "") {
+            res_ap_ss.innerHTML = `Digite a confirmação da senha`
+        }
+
+        if (classe == 'null') {
+            res_ap_c.innerHTML = `Escolha a sua classe favorita`
+        }
+
+    }
+</script>

@@ -125,6 +125,8 @@ input {
     color: black;
 }
 
+
+
 label {
     font-size: 18px;
     gap: 1vh;
@@ -172,14 +174,33 @@ button:hover {
 
 
 
+select {
+    width: 73vh;
+    height: 6.50vh;
+    text-align: center;
+    padding: 8px 16px;
+    border-radius: 12px;
+    border: unset;
+    background-color: white;
+    color: rgb(75, 75, 75);
+    font-weight: 100;
+}
 
 
+.resultado-1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
+
+}
 
 
+.resultado-invalido {
+    font-family: 'Chivo', sans-serif;
+font-size: 15px;
+color: rgb(255, 0, 0);
 
-
-
-
+}
 
 
 
