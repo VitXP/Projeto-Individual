@@ -127,7 +127,7 @@ nav {
 
 .chartCard {
     width: 100%;
-    height: calc(100vh - 40px);
+    height: calc(80vh - 40px);
 
     display: flex;
     align-items: center;
@@ -135,8 +135,8 @@ nav {
 }
 
 .chartBox {
-    width: 80%;
-    height: 95%;
+    width: 50%;
+    height: 75%;
     padding: 20px;
     margin-top: 30vh;
     border-radius: 20px;
