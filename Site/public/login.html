@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Logo icon" href="./Img/logo-barra.png">
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <link rel="stylesheet" href="./js/login.js">
+
+    <script src="./js/funcoes.js"></script>
+    <title>Login | U-Hero</title>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="background-1">
+        <br>
+        <header>
+            <div class="container">
+                <nav>
+                    <img class="logo" src="./Img/logo.png" alt="logo">
+                    <ul class="nav-list">
+                        <li><a class='navbar-lis' href="./index.html">Home</a></li>
+                        <li><a class='navbar-lis' href="historia.html">História</a></li>
+                        <li><a class='navbar-lis' href="./login.html">Entrar</a></li>
+                        <li><a class='navbar-lis' href="./cadastro.html">Cadastrar</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+
+        <!-- Home -->
+        <div class="container-login">
+            <div class="caixa-formulario">
+                <div class="texto-login">
+                    <h1>Login</h1>
+                </div>
+                <div class="formulario-center">
+                    <div class="caixa-formulario-input">
+                        <div class="campo">
+                            <label for="lab_email">E-mail
+                                <input type="email" placeholder="exemplo@gmail.com" id="in_email">
+                                <div id=" div_email"></div>
+                                <div id="res_ap_e" class="resultado-invalido"></div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="caixa-formulario-input">
+                        <div class="campo">
+                            <label for="lab_senha">Senha
+                                <input type="password" placeholder="********************************************" id="in_senha">
+                                <div id=" div_Senha">
+                                    <div id="res_ap_s" class="resultado-invalido"></div>
+                        </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="botao-centralizar">
+        <button onclick="entrar()">ENTRAR</button>
+    </div>
+    </div>
+
+    <!-- Footer -->
+    <header class="header-final">
+        <div class="footer">
+            <div class="divisao-footer">
+                <div class="centralizar">
+                    <div class="divisao-footer2"> </div>
+                </div>
+                <div class="centralizar-logo">
+                    <img class="logo-footer" src="./Img/logo-footer.png" alt="logo">
+                    <div class="divisao-footer3">
+                        <div class="footer-caixa">
+                            <h1>U-Hero © 2022 . Todos os direitos reservados. Desenvolvido por u-Hero .</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+</body>
+
+</html>
+
+<script>
+
+
+    function entrar() {
+        // aguardar();
+
+        var emailVar = in_email.value;
+        var senhaVar = in_senha.value;
+
+        if (emailVar == "" || senhaVar == "") {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            finalizarAguardar();
+            return false;
+        }
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
+
+        console.log("FORM LOGIN: ", emailVar);
+        console.log("FORM SENHA: ", senhaVar);
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.id;
+
+                    setTimeout(function () {
+                        window.location = "./herois.html";
+                    }, 1000); // apenas para exibir o loading
+
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+    function sumirMensagem() {
+        cardErro.style.display = "none"
+    }
+
+</script>
+
+
+
+
+
+
+
+<!-- <script>
+    function entrar() {
+        res_ap_s.innerHTML = ``
+        res_ap_e.innerHTML = ``
+        
+        var email = in_email.value
+        var senha = in_senha.value
+        
+
+
+        if (email == "") {
+            res_ap_e.innerHTML = `E-mail Inválido`
+
+        }
+
+        if (senha == "") {
+            res_ap_s.innerHTML = `Senha Inválida`
+        }
+
+    }
+</script> -->

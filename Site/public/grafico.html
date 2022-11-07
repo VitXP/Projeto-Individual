@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Logo icon" href="./Img/logo-barra.png">
+    <link rel="stylesheet" href="css/grafico.css">
+    <link rel="stylesheet" href="js/grafico.js">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Gráfico | U-Hero</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="background-1">
+        <br>
+        <header>
+            <div class="container">
+                <nav>
+                    <img class="logo" src="./Img/logo.png" alt="logo">
+                    <ul class="nav-list">
+                        <li><a class='navbar-lis' href="./favorito.html">Favorito</a></li>
+                        <li><a class='navbar-lis' href="./herois.html">Heróis</a></li>
+                        <li><a class='navbar-lis' href="./grafico.html">Gráficos</a></li>
+                        <li><a class='navbar-lis' href="./index.html">Deslogar</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+
+        <!-- Home1 -->
+
+        <div class="caixa-texto-grafico">
+            <h1>GRÁFICO DAS<br> CLASSES<br> FAVORITAS</h1>
+        </div>
+    </div>
+
+    <div class="separacao"></div>
+
+
+    <!-- Heróis -->
+    <div class="background-2">
+
+
+    
+
+        <body>
+
+            <div class="chartCard">
+                <div class="chartBox">
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+
+
+
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script>
+                // setup 
+                const data = {
+                    labels: ['SUPORTE', 'DANO', 'TANQUE'],
+                    datasets: [{
+                        label: 'VOTOS',
+                        data: [15,20,10],
+                        backgroundColor: [
+                        'rgba(54, 162, 235, 0.2)',
+
+                            'rgba(255, 26, 104, 0.2)',
+
+                            'rgba(255, 206, 86, 0.2)',
+                          
+                        ],
+                        borderColor: [
+                        'rgba(54, 162, 235, 1)',
+
+                            'rgba(255, 26, 104, 1)',
+                            'rgba(255, 206, 86, 1)',
+                           
+                        ],
+                        borderWidth: 1
+                    
+                    }]
+                };
+
+                // config 
+                const config = {
+                    type: 'bar',
+                    data,
+                    options: {
+                        indexAxis: 'y',
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                };
+
+                // render init block
+                const myChart = new Chart(
+                    document.getElementById('myChart'),
+                    config
+                );
+            </script>
+
+        </body>
+
+</html>
+
+
+
+</div>
+
+
+
+<!-- Footer -->
+<header class="header-final">
+    <div class="footer">
+        <div class="divisao-footer">
+            <div class="centralizar">
+                <div class="divisao-footer2"> </div>
+            </div>
+            <div class="centralizar-logo">
+                <img class="logo-footer" src="./Img/logo-footer.png" alt="logo">
+                <div class="divisao-footer3">
+                    <div class="footer-caixa">
+                        <h1>U-Hero © 2022 . Todos os direitos reservados. Desenvolvido por u-Hero .</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+</body>
+
+</html>

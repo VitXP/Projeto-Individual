@@ -24,7 +24,7 @@ foreign key (fkMetrica) references metrica (idMetrica)
 create table Cadastro (
 idCadastro int auto_increment,
 primary key (idCadastro, fkClasse),
-Apelido varchar (10),
+nome varchar (10),
 email varchar(45), constraint chkemail check (email like '%@%'),
 senha varchar (12),
 confirmarSenha varchar (12),
@@ -32,7 +32,7 @@ fkClasse int,
 foreign key (fkClasse) references classe (idClasse)
 );
 
-
+alter table cadastro rename column apelido to nome;
 -- Inserir dados
 insert into metrica values
 (1,1),
@@ -62,7 +62,7 @@ select * from metrica;
 select*From cadastro as c join classe as cl on c.fkclasse = cl.idclasse join metrica as m on cl.fkmetrica = m.idmetrica;
 
 --  Selecionar apelido, email, senha, confirmar senha, nomeClasse e voto das tabelas cadastro, classe e metrica.
-select c.Apelido, c.email as 'E-mail',c.senha,c.confirmarSenha as 'Confirmar Senha', cl.nomeClasse as 'Classe', m.voto 'Voto' From cadastro as c join classe as cl on c.fkclasse = cl.idclasse join metrica as m on cl.fkmetrica = m.idmetrica;
+select c.nome, c.email as 'E-mail',c.senha,c.confirmarSenha as 'Confirmar Senha', cl.nomeClasse as 'Classe', m.voto 'Voto' From cadastro as c join classe as cl on c.fkclasse = cl.idclasse join metrica as m on cl.fkmetrica = m.idmetrica;
 
 -- Somar votos da classe suporte
 select sum(voto) as 'Total de Votos da classe Suporte'from metrica join classe on fkmetrica = idmetrica where nomeClasse = 'Suporte';
