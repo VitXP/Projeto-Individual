@@ -123,7 +123,7 @@
                 </div>
             </div>
 
-    </div>
+        </div>
 
     </div>
 
@@ -171,9 +171,12 @@
 
     }
 
-    
+
     function cadastrar() {
         // aguardar();
+
+
+      
 
         //Recupere o valor da nova input pelo nome do id
         // Agora vá para o método fetch logo abaixo
@@ -184,9 +187,15 @@
         var classeVar = Number(caixa_classe.value);
 
 
+      
+        
         if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
             cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            res_ap_a.innerHTML = `Digite seu apelido`
+            res_ap_e.innerHTML = `Digite seu e-mail`
+            res_ap_s.innerHTML = `Digite a sua senha`
+            res_ap_ss.innerHTML = `Digite a confirmação da senha`
+            res_ap_c.innerHTML = `Escolha a sua classe favorita`
 
             finalizarAguardar();
             return false;
@@ -222,7 +231,7 @@
                 setTimeout(() => {
                     window.location = "login.html";
                 }, "2000")
-                
+
                 limparFormulario();
                 finalizarAguardar();
             } else {
@@ -241,41 +250,3 @@
     }
 
 </script>
-
-<!-- function cadastrar() {
-        var apelido = in_apelido.value
-        var email = in_email.value
-        var senha = in_senha.value
-        var confirmar = in_confirmar.value
-        var classe = caixa_classe.value
-        res_ap_a.innerHTML = ``
-        res_ap_e.innerHTML = ``
-        res_ap_s.innerHTML = ``
-        res_ap_ss.innerHTML = ``
-
-        if (apelido == "") {
-            res_ap_a.innerHTML = `Digite seu apelido`
-        }
-
-        if (email == "") {
-            res_ap_e.innerHTML = `Digite seu e-mail`
-        }
-
-
-        if (senha == "") {
-            res_ap_s.innerHTML = `Digite a sua senha`
-        }
-
-
-        if (confirmar == "") {
-            res_ap_ss.innerHTML = `Digite a confirmação da senha`
-        }
-
-        if (classe == 'null') {
-            res_ap_c.innerHTML = `Escolha a sua classe favorita`
-        }
-
-    }
-</script>
-
- -->

@@ -1,6 +1,5 @@
 
 
-
 /* LOGIN */
 
 .banner .container .card {
@@ -31,9 +30,6 @@
   margin-top: 15px;
 }
 
-button {
-  cursor: pointer;
-}
 
 /* FORMULARIO */
 
@@ -64,32 +60,8 @@ button {
   font-weight: 600 !important;
 }
 
-.formulario {
-  display: flex;
-  flex-direction: column;
-}
 
-input {
-  margin-bottom: 10px;
-  border: 2px solid #32b9cd;
-  padding: 10px;
-  text-align: center;
-  border-radius: 10px;
-}
 
-.btn {
-  font-family: "Barlow", sans-serif;
-  border: 0;
-  border-radius: 5px;
-  font-weight: 600;
-  font-size: 18px;
-  padding: 10px 15px;
-  color: white;
-  background-color: #e6005a;
-  width: 120px;
-  align-self: center;
-  margin-top: 5px;
-}
 
 .loading-div {
   width: 50px;
