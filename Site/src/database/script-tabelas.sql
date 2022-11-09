@@ -1,99 +1,68 @@
--- Arquivo de apoio, caso você queira criar tabelas como as aqui criadas para a API funcionar.
--- Você precisa executar os comandos no banco de dados para criar as tabelas,
--- ter este arquivo aqui não significa que a tabela em seu BD estará como abaixo!
+-- Criar database
+create database hero;
 
-/*
-comandos para mysql - banco local - ambiente de desenvolvimento
-*/
+-- Selecionar database
+use hero;
 
-CREATE DATABASE aquatech;
-
-USE aquatech;
-
-CREATE TABLE usuario (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	nome VARCHAR(50),
-	email VARCHAR(50),
-	senha VARCHAR(50)
-);
-
-CREATE TABLE aviso (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	titulo VARCHAR(100),
-	descricao VARCHAR(150),
-	fk_usuario INT,
-	FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
-);
-
-create table aquario (
-/* em nossa regra de negócio, um aquario tem apenas um sensor */
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	descricao VARCHAR(300)
-);
-
-/* esta tabela deve estar de acordo com o que está em INSERT de sua API do arduino - dat-acqu-ino */
-
-create table medida (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	dht11_umidade DECIMAL,
-	dht11_temperatura DECIMAL,
-	luminosidade DECIMAL,
-	lm35_temperatura DECIMAL,
-	chave TINYINT,
-	momento DATETIME,
-	fk_aquario INT,
-	FOREIGN KEY (fk_aquario) REFERENCES aquario(id)
+-- Criar tabelas
+create table Metrica (
+idMetrica int primary key auto_increment,
+voto int
 );
 
 
-/*
-comando para sql server - banco remoto - ambiente de produção
-*/
-
-CREATE TABLE usuario (
-	id INT PRIMARY KEY IDENTITY(1,1),
-	nome VARCHAR(50),
-	email VARCHAR(50),
-	senha VARCHAR(50),
+create Table Classe (
+idClasse int auto_increment,
+primary key (idClasse,fkMetrica),
+nomeClasse varchar(7), constraint chknomeClasse check (nomeClasse in ('suporte','dano','tanque')),
+fkMetrica int,
+foreign key (fkMetrica) references metrica (idMetrica)
 );
 
-CREATE TABLE aviso (
-	id INT PRIMARY KEY IDENTITY(1,1),
-	titulo VARCHAR(100),
-	descricao VARCHAR(150),
-	fk_usuario INT FOREIGN KEY REFERENCES usuario(id)
+
+
+create table Usuario (
+idUsuario int auto_increment,
+primary key (idUsuario, fkClasse),
+nome varchar (10),
+email varchar(45), constraint chkemail check (email like '%@%'),
+senha varchar (12),
+fkClasse int,
+foreign key (fkClasse) references classe (idClasse)
 );
 
-create table aquario (
-/* em nossa regra de negócio, um aquario tem apenas um sensor */
-	id INT PRIMARY KEY IDENTITY(1,1),
-	descricao VARCHAR(300)
-);
+-- Inserir dados
+-- Inserir dados
+insert into metrica values
+(1,1),
+(2,1),
+(3,1);
 
-/* esta tabela deve estar de acordo com o que está em INSERT de sua API do arduino - dat-acqu-ino */
+insert into classe values
+(null,'suporte',1),
+(null,'dano',2),
+(null,'tanque',3);
 
-CREATE TABLE medida (
-	id INT PRIMARY KEY IDENTITY(1,1),
-	dht11_umidade DECIMAL,
-	dht11_temperatura DECIMAL,
-	luminosidade DECIMAL,
-	lm35_temperatura DECIMAL,
-	chave TINYINT,
-	momento DATETIME,
-	fk_aquario INT FOREIGN KEY REFERENCES aquario(id)
-);
 
-/*
-comandos para criar usuário em banco de dados azure, sqlserver,
-com permissão de insert + update + delete + select
-*/
 
-CREATE USER [usuarioParaAPIWebDataViz_datawriter_datareader]
-WITH PASSWORD = '#Gf_senhaParaAPIWebDataViz',
-DEFAULT_SCHEMA = dbo;
+-- Selecionar tabelas
+select * from usuario;
+select * from classe;
+select * from metrica;
 
-EXEC sys.sp_addrolemember @rolename = N'db_datawriter',
-@membername = N'usuarioParaAPIWebDataViz_datawriter_datareader';
+-- Selecionar cadastro, classe e metrica
+select*From usuario as c join classe as cl on c.fkclasse = cl.idclasse join metrica as m on cl.fkmetrica = m.idmetrica;
 
-EXEC sys.sp_addrolemember @rolename = N'db_datareader',
-@membername = N'usuarioParaAPIWebDataViz_datawriter_datareader';
+--  Selecionar apelido, email, senha, nomeClasse e voto das tabelas cadastro, classe e metrica.
+select  u.nome, u.email as 'E-mail',u.senha, cl.nomeClasse as 'Classe', m.voto 'Voto'  From usuario as u join classe as cl on u.fkclasse = cl.idclasse join metrica as m on cl.fkmetrica = m.idmetrica;
+
+-- Somar votos da classe suporte
+select sum(voto) From usuario as c join classe as cl on c.fkclasse = cl.idclasse join metrica as m on cl.fkmetrica = m.idmetrica  where nomeClasse = 'suporte'; 
+
+-- Somar votos da classe Dano
+select sum(voto) From usuario as c join classe as cl on c.fkclasse = cl.idclasse join metrica as m on cl.fkmetrica = m.idmetrica  where nomeClasse = 'dano'; 
+
+-- Somar votos da classe Tanque
+select sum(voto) From usuario as c join classe as cl on c.fkclasse = cl.idclasse join metrica as m on cl.fkmetrica = m.idmetrica  where nomeClasse = 'tanque'; 
+
+
