@@ -86,7 +86,7 @@
                             <label for="lab_confirmar-senha">Classe Favorita
 
                                 <select name="" id="caixa_classe" onchange="exibir()">
-                                    <option value=null></option>
+                                    <option value='0'></option>
                                     <option value="1">SUPORTE</option>
                                     <option value="2">DANO</option>
                                     <option value="3">TANQUE</option>
@@ -152,101 +152,5 @@
 </html>
 
 </html>
-<script>
-    function exibir() {
-        var classe = caixa_classe.value
 
-        if (classe == 'null') {
-            resultado_imagem.innerHTML = ``
-        } else if (classe == 'suporte') {
-            res_ap_c.innerHTML = ``
-            resultado_imagem.innerHTML = `<div><img src="./Img/SupportIcon.webp" alt="suporte"></div>`
-        } else if (classe == 'dano') {
-            res_ap_c.innerHTML = ``
-            resultado_imagem.innerHTML = `<div><img src="./Img/OffenseIcon.png" alt="dano"></div>`
-        } else {
-            res_ap_c.innerHTML = ``
-            resultado_imagem.innerHTML = `<div><img src="./Img/TankIcon.webp" alt="tanque"></div>`
-        }
-
-    }
-
-
-    function cadastrar() {
-        // aguardar();
-
-
-      
-
-        //Recupere o valor da nova input pelo nome do id
-        // Agora vá para o método fetch logo abaixo
-        var nomeVar = in_apelido.value;
-        var emailVar = in_email.value;
-        var senhaVar = in_senha.value;
-        var confirmacaoSenhaVar = in_confirmar.value;
-        var classeVar = Number(caixa_classe.value);
-
-
-      
-        
-        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
-            cardErro.style.display = "block"
-            res_ap_a.innerHTML = `Digite seu apelido`
-            res_ap_e.innerHTML = `Digite seu e-mail`
-            res_ap_s.innerHTML = `Digite a sua senha`
-            res_ap_ss.innerHTML = `Digite a confirmação da senha`
-            res_ap_c.innerHTML = `Escolha a sua classe favorita`
-
-            finalizarAguardar();
-            return false;
-        }
-        else {
-            setInterval(sumirMensagem, 5000)
-        }
-
-        // Enviando o valor da nova input
-        fetch("/usuarios/cadastrar", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                // crie um atributo que recebe o valor recuperado aqui
-                // Agora vá para o arquivo routes/usuario.js
-                nomeServer: nomeVar,
-                emailServer: emailVar,
-                senhaServer: senhaVar,
-                classeServer: classeVar
-
-            })
-        }).then(function (resposta) {
-
-            console.log("resposta: ", resposta);
-
-            if (resposta.ok) {
-                cardErro.style.display = "block";
-
-                mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
-
-                setTimeout(() => {
-                    window.location = "login.html";
-                }, "2000")
-
-                limparFormulario();
-                finalizarAguardar();
-            } else {
-                throw ("Houve um erro ao tentar realizar o cadastro!");
-            }
-        }).catch(function (resposta) {
-            console.log(`#ERRO: ${resposta}`);
-            finalizarAguardar();
-        });
-
-        return false;
-    }
-
-    function sumirMensagem() {
-        cardErro.style.display = "none"
-    }
-
-</script>
+<script src="js/cadastro.js"></script>
