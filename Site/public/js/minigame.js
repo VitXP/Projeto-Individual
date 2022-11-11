@@ -1,6 +1,7 @@
 
 var historico = []
 
+
 function somar() {
     resultado.innerHTML = ``
     var numero_um = Number(in_numero_um.value)
@@ -17,16 +18,31 @@ function somar() {
         } else if (aleatorio == 2) {
             resultado.innerHTML += `<img src="./Img/fox-1.png" alt="fox">`
         }
+
     }
 
-    placar.innerHTML = `
-        <div class="texto"><h3>Histórico</h3></div>
-        <div class="placa">
-        <div class="centralizar">
-        <h3>1º Soma = ${historico[0]}</h3>
-        <h3> 3º Soma = ${historico[2]}</h3>
-        <h3> Última Soma = ${historico[historico.length - 1]}
-        </h3>`
+    if () {
+        placar.innerHTML = `
+            <div class="texto"><h3>Histórico</h3></div>
+            <div class="placa">
+            <div class="centralizar">
+            <h3>1º Soma = ${historico[0]}</h3>
+            <h3> 3º Soma = Aguardando calculo
+            </h3>
+            <h3> Soma Atual = ${historico[historico.length - 1]}
+            </h3>`
+    } else {
+        placar.innerHTML = `
+            <div class="texto"><h3>Histórico</h3></div>
+            <div class="placa">
+            <div class="centralizar">
+            <h3>1º Soma = ${historico[0]}</h3>
+            <h3> 3º Soma = ${historico[2]}</h3>
+            <h3> Soma Atual = ${historico[historico.length - 1]}
+            </h3>`
+    }
+
+
 }
 
 

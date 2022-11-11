@@ -7,6 +7,9 @@
 }
 
 
+html {
+    scroll-behavior: smooth;
+}
 
 /*  */
 body::-webkit-scrollbar {
@@ -168,8 +171,8 @@ button {
     background: no-repeat;
     background: linear-gradient(180deg, rgba(116, 163, 160, 0.947917) 0%, #487B78 99.96%, rgba(255, 255, 255, 0) 99.97%, rgba(118, 170, 167, 0.978031) 99.98%, rgba(0, 0, 0, 0.839358) 99.99%, rgba(95, 88, 88, 0) 100%);
     width: 100%;
-    height: 130vh;
-
+    min-height: 79vh;
+    padding-bottom: 4rem;
 }
 
 
@@ -280,6 +283,7 @@ h2 {
     margin-top: -11vh;
     background: #FFFFFF;
     border-radius: 20px;
+
 }
 
 .centralizar {

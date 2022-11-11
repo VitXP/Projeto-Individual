@@ -7,13 +7,8 @@ function entrar() {
     var nulo = emailVar == "" || senhaVar == ""
     res_ap_s.innerHTML = ``
     res_ap_e.innerHTML = ``
+    div_erros_login.innerHTML = ``
 
-
-    if (nulo) {
-        res_ap_e.innerHTML = `Digite seu e-mail`
-        res_ap_s.innerHTML = `Digite a sua senha`
-        finalizarAguardar();
-    }
 
     if (emailVar == ``) {
         res_ap_e.innerHTML = `Digite seu e-mail`
@@ -25,18 +20,6 @@ function entrar() {
         finalizarAguardar();
         return false;
     }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

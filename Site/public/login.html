@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="Logo icon" href="./Img/logo-barra.png">
     <link rel="stylesheet" href="./css/login.css">
-    <link rel="stylesheet" href="./css/style.css">
 
     <link rel="stylesheet" href="./js/login.js">
 
@@ -37,6 +36,14 @@
 
 
         <!-- Home -->
+
+        <div class="alerta_erro">
+            <div class="card_erro" id="cardErro">
+                <span id="mensagem_erro"></span>
+            </div>
+        </div>
+
+
         <div class="container-login">
             <div class="caixa-formulario">
                 <div class="texto-login">
@@ -56,8 +63,7 @@
                     <div class="caixa-formulario-input">
                         <div class="campo">
                             <label for="lab_senha">Senha
-                                <input type="password" placeholder="********************************************"
-                                    id="in_senha">
+                                <input type="password" placeholder="**********" id="in_senha">
                                 <div id=" div_Senha">
                                     <div id="res_ap_s" class="resultado-invalido"></div>
                                 </div>
@@ -66,15 +72,22 @@
                     </div>
                 </div>
             </div>
-
         </div>
+
+
+        <div id="div_aguardar" class="loading-div"></div>
+
+        <div id="div_erros_login"></div>
+
         <div class="botao-centralizar">
             <button onclick="entrar()">ENTRAR</button>
         </div>
+
+
     </div>
 
     <!-- Footer -->
-    <header class="header-final">
+    <footer class="header-final">
         <div class="footer">
             <div class="divisao-footer">
                 <div class="centralizar">
@@ -90,7 +103,7 @@
                 </div>
             </div>
         </div>
-    </header>
+    </footer>
 </body>
 
 </html>

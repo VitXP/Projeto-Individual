@@ -7,8 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="Logo icon" href="./Img/logo-barra.png">
     <link rel="stylesheet" href="./css/cadastro.css">
-    <link rel="stylesheet" href="./css/style.css">
-
     <script src="./js/funcoes.js"></script>
     <title>Cadastro | U-Hero</title>
 </head>
@@ -65,7 +63,7 @@
                     <div class="caixa-formulario-input">
                         <div class="campo">
                             <label for="lab_senha">Senha
-                                <input type="password" placeholder="********************************************"
+                                <input type="password" placeholder='**********'
                                     id="in_senha">
                                 <div id="res_ap_s" class="resultado-invalido"></div>
                             </label>
@@ -75,7 +73,7 @@
                     <div class=" caixa-formulario-input">
                         <div class="campo">
                             <label for="lab_confirmar-senha">Confirmar Senha
-                                <input type="password" placeholder="********************************************"
+                                <input type="password" placeholder="**********"
                                     id="in_confirmar">
                                 <div id="res_ap_ss" class="resultado-invalido"></div>
                             </label>
@@ -109,14 +107,10 @@
             <button onclick="cadastrar()">CADASTRAR</button>
         </div>
 
-        <div id="div_aguardar" class="loading-div">
-            <img src="./assets/circle-loading.gif" id="loading-gif">
-        </div>
+        <div id="div_aguardar" class="loading-div"></div>
 
-        <div id="div_erros_login">
-
-        </div>
-        <div id="div_erros_login">
+        <div id="div_erros_login"></div>
+        
 
             <div class="alerta_erro">
                 <div class="card_erro" id="cardErro">
@@ -124,13 +118,12 @@
                 </div>
             </div>
 
-        </div>
 
     </div>
 
 
     <!-- Footer -->
-    <header class="header-final">
+    <footer class="header-final">
         <div class="footer">
             <div class="divisao-footer">
                 <div class="centralizar">
@@ -147,7 +140,7 @@
                 </div>
             </div>
         </div>
-    </header>
+    </footer>
 </body>
 
 </html>

@@ -59,64 +59,45 @@ function cadastrar() {
 
 
     if (nomeVar == "") {
-        cardErro.style.display = "block"
         res_ap_a.innerHTML = `Digite seu apelido`
     }
 
     if (apelido_Conter) {
-        cardErro.style.display = "block"
         res_ap_a.innerHTML = `Seu apelido deve conter até 10 caracteres`
     }
 
     if (emailVar == "") {
-        cardErro.style.display = "block"
         res_ap_e.innerHTML = `Digite seu e-mail`
-        finalizarAguardar();
     }
 
     if (arroba) {
-        cardErro.style.display = "block"
         res_ap_e.innerHTML = `Seu e-mail deve conter @`
-        finalizarAguardar();
     }
 
     if (senhaVar == "") {
-        cardErro.style.display = "block"
         res_ap_s.innerHTML = `Digite a sua senha`
-        finalizarAguardar();
     }
 
     if (senha_oito || senha_conter) {
-        cardErro.style.display = "block"
         res_ap_s.innerHTML = `Sua senha deve conter entre 8 a 12 caracteres`
-        finalizarAguardar();
     }
 
     if (confirmacaoSenhaVar == "") {
-        cardErro.style.display = "block"
         res_ap_ss.innerHTML = `Digite a confirmação da senha`
-        finalizarAguardar();
     }
 
 
 
     if (diferente) {
-        cardErro.style.display = "block"
         res_ap_ss.innerHTML = `As senhas não são iguais. Tente novamente.`
-        finalizarAguardar();
     }
 
     if (classeVar == 0) {
-        cardErro.style.display = "block"
         res_ap_c.innerHTML = `Escolha a sua classe favorita`
-        finalizarAguardar();
     }
 
     if (bloquear) {
-        cardErro.style.display = "block"
-        finalizarAguardar();
         return false;
-
     }
 
 
@@ -153,6 +134,7 @@ function cadastrar() {
             finalizarAguardar();
         } else {
             throw ("Houve um erro ao tentar realizar o cadastro!");
+            mensagem_erro.innerHTML = "erro";
         }
     }).catch(function (resposta) {
         console.log(`#ERRO: ${resposta}`);
