@@ -4,7 +4,7 @@ contador = 1
 
 
 function somar() {
-    contador ++
+    contador++
     resultado.innerHTML = ``
     var numero_um = Number(in_numero_um.value)
     var numero_dois = Number(in_numero_dois.value)
@@ -46,5 +46,6 @@ function somar() {
 
 
 }
+
 
 
