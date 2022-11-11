@@ -24,6 +24,12 @@ function limparSessao() {
     window.location = "../login.html";
 }
 
+// Deslogar
+function deslogar() {
+    limparSessao(); // importar funções
+    window.location.href = "index.html"; // mudar de página, navegando até o arquivo XPTO
+}
+
 // carregamento (loading)
 function aguardar() {
     var divAguardar = document.getElementById("div_aguardar");

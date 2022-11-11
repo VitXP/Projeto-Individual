@@ -1,14 +1,14 @@
 function entrar() {
     // aguardar();
 
-    
+
     var emailVar = in_email.value;
     var senhaVar = in_senha.value;
     var nulo = emailVar == "" || senhaVar == ""
     res_ap_s.innerHTML = ``
     res_ap_e.innerHTML = ``
 
-    
+
     if (nulo) {
         res_ap_e.innerHTML = `Digite seu e-mail`
         res_ap_s.innerHTML = `Digite a sua senha`
@@ -23,8 +23,8 @@ function entrar() {
     if (senhaVar == ``) {
         res_ap_s.innerHTML = `Digite a sua senha`
         finalizarAguardar();
+        return false;
     }
-    
 
 
 
@@ -33,7 +33,7 @@ function entrar() {
 
 
 
-    return false;
+
 
 
 

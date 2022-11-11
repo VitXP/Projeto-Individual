@@ -37,7 +37,7 @@ body::-webkit-scrollbar-thumb {
 
 
 /* Navbar */
-a {
+a, span {
     font-family: Arial;
     font-style: normal;
     font-weight: 900;
@@ -45,6 +45,7 @@ a {
     color: #F06414;
     text-decoration: none;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 .navbar-lis:hover {
@@ -52,7 +53,14 @@ a {
     color: #ff5e00;
 }
 
+.navbar-lis1:hover {
+    opacity: 0.7;
+    color: #928f8f;
+}
 
+.navbar-lis1 {
+    color: #777171;
+}
 
 .logo {
     text-transform: uppercase;

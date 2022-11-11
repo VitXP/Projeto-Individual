@@ -1,7 +1,7 @@
 b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
-    
+
 let proximaAtualizacao;
-    
+
 window.onload = obterDadosGrafico(1);
 
 verificar_autenticacao();
@@ -54,7 +54,7 @@ function plotarGrafico(resposta, idAquario) {
 
     // Criando estrutura para plotar gráfico - labels
     let labels = [];
-    
+
     // Criando estrutura para plotar gráfico - dados
     let dados = {
         labels: labels,
@@ -73,11 +73,11 @@ function plotarGrafico(resposta, idAquario) {
             tension: 0.1
         }]
     };
-    
+
     console.log('----------------------------------------------')
     console.log('Estes dados foram recebidos pela funcao "obterDadosGrafico" e passados para "plotarGrafico":')
     console.log(resposta)
-    
+
     // Inserindo valores recebidos em estrutura para plotar o gráfico
     for (i = 0; i < resposta.length; i++) {
         var registro = resposta[i];
@@ -85,7 +85,7 @@ function plotarGrafico(resposta, idAquario) {
         dados.datasets[0].data.push(registro.umidade);
         dados.datasets[1].data.push(registro.temperatura);
     }
-    
+
     console.log('----------------------------------------------')
     console.log('O gráfico será plotado com os respectivos valores:')
     console.log('Labels:')
@@ -93,7 +93,7 @@ function plotarGrafico(resposta, idAquario) {
     console.log('Dados:')
     console.log(dados.datasets)
     console.log('----------------------------------------------')
-    
+
     // Criando estrutura para plotar gráfico - config
     const config = {
         type: 'line',
