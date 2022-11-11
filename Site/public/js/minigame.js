@@ -1,8 +1,10 @@
 
 var historico = []
+contador = 1
 
 
 function somar() {
+    contador ++
     resultado.innerHTML = ``
     var numero_um = Number(in_numero_um.value)
     var numero_dois = Number(in_numero_dois.value)
@@ -21,7 +23,7 @@ function somar() {
 
     }
 
-    if () {
+    if (contador < 4) {
         placar.innerHTML = `
             <div class="texto"><h3>Histórico</h3></div>
             <div class="placa">
