@@ -212,7 +212,10 @@ select {
 
 }
 
-
+.alerta_erro {
+    display: flex;
+    justify-content: center;
+}
 
 
 /* Footer */
