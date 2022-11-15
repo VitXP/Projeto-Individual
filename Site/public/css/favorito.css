@@ -126,15 +126,58 @@ nav {
 
 }
 
+.background {
+    width: 100%;
+    height: 50vh;
+
+    background: linear-gradient(180deg, #EDECE2 0%, #C2C0AB 100%);
+}
+
+.alinhar-caixa {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10vh;
+    margin-bottom: 10vh;
+}
+
+.caixa {
+    width: 256px;
+    height: 238px;
+    margin-top: 8.60vh;
+    border-radius: 20px;
+}
+
+.alinhar-dentro-caixa {
+    align-items: center;
+    margin-top: 2vh;
+}
+
+.separar {
+    margin-bottom: 4vh;
+}
+
+.texto {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 100;
+    padding: 5vh;
+    font-size: 13px;
+    color: #B4A5A5;
+
+}
+
 
 
 /* <!-- Herói --> */
 
 .background-2 {
     width: 100%;
-    height: 130vh;
+    height: 106vh;
 
-    background: linear-gradient(180deg, rgba(153, 149, 110, 0.71) 0%, #CECCB2 99.93%, #99956E 99.94%, rgba(95, 88, 88, 0) 99.95%, rgba(105, 141, 139, 0) 99.96%);
+    background-image: url('../Img/fundo-mercy-2.png');
+
 
 }
 
@@ -164,22 +207,34 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: center;
-
-
+    gap: 8vh;
+    text-indent: 1.5em;
+    text-align: justify;
 }
 
 .caixa-texto-favorito1 {
-    padding: 10vh;
     word-wrap: normal;
     width: 60vh;
     font-size: 20px;
     color: white;
-    border: 1px solid black;
     font-family: 'Lato', sans-serif;
 
 }
 
+button:hover {
+    transform: scale(1.10);
+    cursor:pointer;
+}
 
+button {
+    text-decoration: none;
+    border: none;
+    width: 256px;
+    height: 238px;
+    border-radius: 20px;
+    transition: .1s ease;
+    background: #FFFFFF;
+}
 
 /* Footer */
 

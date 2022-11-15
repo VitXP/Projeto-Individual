@@ -1,4 +1,3 @@
-
 var historico = []
 contador = 1
 
@@ -46,6 +45,4 @@ function somar() {
 
 
 }
-
-
 

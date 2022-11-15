@@ -172,7 +172,20 @@ nav {
     padding: 5vh;
 }
 
+button:hover {
+    transform: scale(1.10);
+    cursor:pointer;
+}
 
+button {
+    text-decoration: none;
+    border: none;
+    width: 277px;
+    height: 270px;
+    border-radius: 20px;
+    transition: .1s ease;
+    background: #FFFFFF;
+}
 
 
 
