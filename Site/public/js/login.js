@@ -1,5 +1,5 @@
 function entrar() {
-    // aguardar();
+    aguardar();
 
 
     var emailVar = in_email.value;
@@ -19,11 +19,9 @@ function entrar() {
         res_ap_s.innerHTML = `Digite a sua senha`
         finalizarAguardar();
         return false;
+    } else {
+        setInterval(sumirMensagem, 5000)
     }
-
-
-
-
 
 
 

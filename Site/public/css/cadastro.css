@@ -217,7 +217,11 @@ select {
     justify-content: center;
 }
 
-
+.redirecionar {
+    font-family: 'Chivo', sans-serif;
+    font-size: 20px;
+    color: #ff5900;
+}
 /* Footer */
 
 .divisao-footer {

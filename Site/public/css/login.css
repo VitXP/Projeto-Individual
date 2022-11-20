@@ -183,6 +183,10 @@ button:hover {
 
 }
 
+.alerta_erro {
+    display: flex;
+    justify-content: center;
+}
 #div_erros_login {
     font-family: 'Chivo', sans-serif;
     font-size: 15px;
@@ -190,6 +194,20 @@ button:hover {
     display: flex;
 justify-content: center;}
 
+
+
+.loading-div {
+    width: 50px;
+    margin: auto;
+    display: none;
+  }
+  
+  .loading-div img {
+    height: 50px;
+    width: 50px;
+  }
+
+  
 /* Footer */
 
 .divisao-footer {

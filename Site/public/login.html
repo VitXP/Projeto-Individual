@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="Logo icon" href="./Img/logo-barra.png">
     <link rel="stylesheet" href="./css/login.css">
-
     <link rel="stylesheet" href="./js/login.js">
 
     <script src="./js/funcoes.js"></script>
@@ -73,16 +72,28 @@
                 </div>
             </div>
         </div>
+        <div class="alerta_erro">
+            <div class="card_erro" id="cardErro">
+                <span id="mensagem_erro"></span>
+            </div>
+        </div>
 
-
-        <div id="div_aguardar" class="loading-div"></div>
+        <div id="div_aguardar" class="loading-div">
+            <img src="./Img/loader.gif" id="loading-gif">
+        </div>
 
         <div id="div_erros_login"></div>
 
+        
         <div class="botao-centralizar">
             <button onclick="entrar()">ENTRAR</button>
         </div>
 
+
+       
+
+
+       
 
     </div>
 
