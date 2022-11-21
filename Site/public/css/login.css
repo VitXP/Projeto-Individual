@@ -189,10 +189,11 @@ button:hover {
 }
 #div_erros_login {
     font-family: 'Chivo', sans-serif;
-    font-size: 15px;
+    font-size: 18px;
     color: rgb(255, 0, 0);
     display: flex;
-justify-content: center;}
+    justify-content: center;
+}
 
 
 

@@ -41,30 +41,33 @@
                 <div class="texto-cadastro">
                     <h1>Cadastro</h1>
                 </div>
-                <div class="formulario-center">
-                    <div class="caixa-formulario-input">
-                        <div class="campo">
-                            <label for="lab_apelido">Apelido
-                                <input id="in_apelido" type="text" placeholder="Herói">
-                                <div id="res_ap_a" class="resultado-invalido"></div>
-                            </label>
+
+                    <div class="formulario-center">
+                        <div class="agrupar">
+                        <div class="caixa-formulario-input">
+                            <div class="campo">
+                                <label for="lab_apelido">Apelido
+                                    <input id="in_apelido" type="text" placeholder="Herói">
+                                    <div id="res_ap_a" class="resultado-invalido"></div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="caixa-formulario-input">
+                            <div class="campo">
+                                <label for="lab_email">E-mail
+                                    <input type="email" placeholder="exemplo@gmail.com" id="in_email">
+                                    <div id="res_ap_e" class="resultado-invalido"></div>
+                                </label>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="caixa-formulario-input">
-                        <div class="campo">
-                            <label for="lab_email">E-mail
-                                <input type="email" placeholder="exemplo@gmail.com" id="in_email">
-                                <div id="res_ap_e" class="resultado-invalido"></div>
-                            </label>
-                        </div>
-                    </div>
-
+                    <div class="agrupar">
                     <div class="caixa-formulario-input">
                         <div class="campo">
                             <label for="lab_senha">Senha
-                                <input type="password" placeholder='**********'
-                                    id="in_senha">
+                                <input type="password" placeholder='**********' id="in_senha">
                                 <div id="res_ap_s" class="resultado-invalido"></div>
                             </label>
                         </div>
@@ -73,12 +76,12 @@
                     <div class=" caixa-formulario-input">
                         <div class="campo">
                             <label for="lab_confirmar-senha">Confirmar Senha
-                                <input type="password" placeholder="**********"
-                                    id="in_confirmar">
+                                <input type="password" placeholder="**********" id="in_confirmar">
                                 <div id="res_ap_ss" class="resultado-invalido"></div>
                             </label>
                         </div>
                     </div>
+                </div>
 
                     <div class=" caixa-formulario-input">
                         <div class="campo">
@@ -103,23 +106,25 @@
         </div>
 
         <div class="banner">
-        <div class="alerta_erro">
-            <div class="card_erro" id="cardErro">
-                <span class= 'redirecionar' id="mensagem_erro"></span>
+            <div class="alerta_erro">
+                <div class="card_erro" id="cardErro">
+                    <span class='redirecionar' id="mensagem_erro">
+                    </span>
+                </div>
             </div>
         </div>
-    </div>
 
         <div class=" botao-centralizar">
             <button onclick="cadastrar()">CADASTRAR</button>
         </div>
 
-        <div id="div_aguardar" class="loading-div"></div>
+        <div id="div_aguardar" class="loading-div">
+        </div>
 
         <div id="div_erros_login"></div>
-        
 
-          
+
+
 
 
     </div>

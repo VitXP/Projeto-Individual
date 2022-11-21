@@ -2,19 +2,23 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
 * {
     padding: 0;
     margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 .background-1 {
     background: no-repeat;
     background-image: url('../Img/fundo-cadastro.png');
     width: 100%;
-    height: 193vh;
-    left: 0px;
-    top: 0px;
-
+    min-height: 79vh;
+    padding-bottom: 6rem;
 }
 
 
@@ -104,7 +108,11 @@ nav {
 /* Home */
 
 
-
+.agrupar {
+    display: flex;
+    flex-direction: row;
+    gap: 5vh;
+}
 .texto-cadastro {
     text-align: center;
     color: #FFFFFF;
@@ -125,8 +133,8 @@ nav {
 }
 
 input {
-    width: 490px;
-    height: 33px;
+    width: 40vh;
+    height: 24px;
     text-align: center;
     padding: 8px 16px;
     border-radius: 12px;
@@ -173,7 +181,7 @@ button {
 .botao-centralizar {
     display: flex;
     justify-content: center;
-    margin-top: 8vh;
+    margin-top: 2vh;
 }
 
 button:hover {
@@ -185,7 +193,6 @@ button:hover {
 
 
 select {
-    width: 73vh;
     height: 6.50vh;
     text-align: center;
     padding: 8px 16px;
@@ -194,13 +201,14 @@ select {
     background-color: white;
     color: rgb(75, 75, 75);
     font-weight: 100;
+    
 }
 
 
 .resultado-1 {
     display: flex;
     justify-content: center;
-    margin-top: 10vh;
+    margin-top: 1vh;
 
 }
 
@@ -215,12 +223,16 @@ select {
 .alerta_erro {
     display: flex;
     justify-content: center;
+    margin-bottom: 5vh;
 }
 
 .redirecionar {
-    font-family: 'Chivo', sans-serif;
-    font-size: 20px;
-    color: #ff5900;
+    width: 100%;
+    height: 100vh;
+
+    font-family: 'VT323', monospace;
+    font-size: 24px;
+    color: #19d33b;
 }
 /* Footer */
 
