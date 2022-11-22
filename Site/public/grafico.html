@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="Logo icon" href="./Img/logo-barra.png">
     <link rel="stylesheet" href="css/grafico.css">
-    <link rel="stylesheet" href="js/grafico.js">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <title>Gráfico | U-Hero</title>
 </head>
 
-<body>
+<body onload=" atualizarFeed()"> 
     <!-- Navbar -->
     <div class="background-1">
         <br>
@@ -47,7 +47,8 @@
 
 
 
-        <body>
+
+        <div class="dash">
 
             <div class="chartCard">
                 <div class="chartBox">
@@ -55,58 +56,16 @@
                 </div>
             </div>
 
+            <div>
+                <h3 class="tituloGraficos">
+                    <span id="tituloclasse"></span>
+                </h3>
+            </div>
+
+        </div>
 
 
-            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-            <script>
-                // setup 
-                const data = {
-                    labels: ['SUPORTE', 'DANO', 'TANQUE'],
-                    datasets: [{
-                        label: 'VOTOS',
-                        data: [],
-                        backgroundColor: [
-                            'rgba(54, 162, 235, 0.2)',
-
-                            'rgba(255, 26, 104, 0.2)',
-
-                            'rgba(255, 206, 86, 0.2)',
-
-                        ],
-                        borderColor: [
-                            'rgba(54, 162, 235, 1)',
-
-                            'rgba(255, 26, 104, 1)',
-                            'rgba(255, 206, 86, 1)',
-
-                        ],
-                        borderWidth: 1
-
-                    }]
-                };
-
-                // config 
-                const config = {
-                    type: 'bar',
-                    data,
-                    options: {
-                    
-                        scales: {
-                            y: {
-                                beginAtZero: true
-                            }
-                        }
-                    }
-                };
-
-                // render init block
-                const myChart = new Chart(
-                    document.getElementById('myChart'),
-                    config
-                );
-            </script>
-
-        </body>
+</body>
 
 </html>
 
@@ -140,5 +99,7 @@
 </body>
 
 </html>
-<script src="js/grafico.js"></script>
+
 <script src="js/funcoes.js"></script>
+<script src="js/grafico.js"></script>
+

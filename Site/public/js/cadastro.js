@@ -1,17 +1,15 @@
 function exibir() {
     var classe = caixa_classe.value
 
+    resultado_imagem.innerHTML = ``;
+    
     if (classe == '0') {
-        resultado_imagem.innerHTML = ``
     } else if (classe == '1') {
-        res_ap_c.innerHTML = ``
-        resultado_imagem.innerHTML = `<div><img src="./Img/SupportIcon.webp" alt="suporte"></div>`
+        resultado_imagem.innerHTML = `<div><img class="imganimacao" src="./Img/SupportIcon.webp" alt="suporte"></div>`
     } else if (classe == '2') {
-        res_ap_c.innerHTML = ``
-        resultado_imagem.innerHTML = `<div><img src="./Img/OffenseIcon.png" alt="dano"></div>`
+        resultado_imagem.innerHTML = `<div><img class="imganimacao" src="./Img/OffenseIcon.png" alt="dano"></div>`
     } else {
-        res_ap_c.innerHTML = ``
-        resultado_imagem.innerHTML = `<div><img src="./Img/TankIcon.webp" alt="tanque"></div>`
+        resultado_imagem.innerHTML = `<div><img class="imganimacao" src="./Img/TankIcon.webp" alt="tanque"></div>`
     }
 
 }

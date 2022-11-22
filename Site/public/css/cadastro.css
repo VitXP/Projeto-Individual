@@ -113,6 +113,7 @@ nav {
     flex-direction: row;
     gap: 5vh;
 }
+
 .texto-cadastro {
     text-align: center;
     color: #FFFFFF;
@@ -201,7 +202,7 @@ select {
     background-color: white;
     color: rgb(75, 75, 75);
     font-weight: 100;
-    
+
 }
 
 
@@ -209,9 +210,18 @@ select {
     display: flex;
     justify-content: center;
     margin-top: 1vh;
-
 }
 
+.imganimacao {
+    animation: imgsanimacao 700ms linear;
+}
+
+@keyframes imgsanimacao {
+    0% {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+}
 
 .resultado-invalido {
     font-family: 'Chivo', sans-serif;
@@ -234,6 +244,7 @@ select {
     font-size: 24px;
     color: #19d33b;
 }
+
 /* Footer */
 
 .divisao-footer {
