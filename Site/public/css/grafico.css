@@ -128,9 +128,7 @@ nav {
 .background-2 {
     width: 100%;
     height: 107vh;
-    background: linear-gradient(180deg, #D9D9D9 26.49%, rgba(128, 165, 158, 0.953066) 124.37%, rgba(0, 0, 0, 0.839358) 124.38%, rgba(217, 217, 217, 0) 124.39%, rgba(3, 0, 0, 0.947917) 124.4%);
-
-}
+    background: linear-gradient(180deg, #4AFFC9 0%, rgba(94, 148, 131, 0.81) 0.01%, #84A098 0.02%, rgba(76, 160, 135, 0.984937) 100%);}
 
 .chartCard {
     width: 100%;

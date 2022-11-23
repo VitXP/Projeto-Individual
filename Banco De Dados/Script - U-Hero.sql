@@ -54,9 +54,3 @@ select  u.nome, u.email as 'E-mail',u.senha, cl.nomeClasse as 'Classe', f.descri
 
 -- metrica gráfica
 select c.nomeClasse as 'Classe', count(*) as votos from usuario u join classe c on u.fkClasse = c.idClasse group by c.fkfuncao order by c.idclasse;
-
-insert into usuario values 
-(null,'Juan','juan@gmail.com', sha2('12345678',256), 3);
-(null,'marta','marta@gmail.com', sha2('12345678',256), 3),
-(null,'jaqueline','jaqueline@gmail.com', sha2('12345678',256), 3),
-(null,'valdemir','valdemir@gmail.com', sha2('12345678',256), 3 );
