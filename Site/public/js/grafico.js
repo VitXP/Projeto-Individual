@@ -46,7 +46,7 @@
     // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
     // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
     // A função *plotarGrafico* também invoca a função *atualizarGrafico*
-    function plotarGrafico(resposta, fkClasse) {
+    function plotarGrafico(resposta) {
         console.log('iniciando plotagem do gráfico...');
 
         // Criando estrutura para plotar gráfico - labels
@@ -55,7 +55,7 @@
         // Criando estrutura para plotar gráfico - dados
          // setup 
          const dados = {
-            labels: ['SUPORTE', 'DANO', 'TANQUE'],
+            labels: ['TANQUE', 'DANO', 'SUPORTE'],
             datasets: [{
                 label: 'Votos',
                 data: [],

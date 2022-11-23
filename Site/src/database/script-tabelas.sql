@@ -10,7 +10,6 @@ idFuncao int primary key auto_increment,
 descricao varchar(200)
 );
 
-
 create table if not exists Classe (
 idClasse int auto_increment,
 primary key (idClasse,fkFuncao),
@@ -49,7 +48,6 @@ insert into classe values
 select * from usuario;
 select * from classe;
 select * from funcao;
-
 
 --  Selecionar apelido, email, senha, nomeClasse e voto das tabelas cadastro, classe.
 select  u.nome, u.email as 'E-mail',u.senha, cl.nomeClasse as 'Classe', f.descricao as 'Descrição' From usuario as u join classe as cl on u.fkclasse = cl.idclasse join funcao as f on f.idfuncao = cl.fkfuncao order by u.nome;

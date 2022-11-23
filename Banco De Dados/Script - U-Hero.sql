@@ -10,7 +10,6 @@ idFuncao int primary key auto_increment,
 descricao varchar(200)
 );
 
-
 create table if not exists Classe (
 idClasse int auto_increment,
 primary key (idClasse,fkFuncao),
@@ -50,9 +49,14 @@ select * from usuario;
 select * from classe;
 select * from funcao;
 
-
 --  Selecionar apelido, email, senha, nomeClasse e voto das tabelas cadastro, classe.
 select  u.nome, u.email as 'E-mail',u.senha, cl.nomeClasse as 'Classe', f.descricao as 'Descrição' From usuario as u join classe as cl on u.fkclasse = cl.idclasse join funcao as f on f.idfuncao = cl.fkfuncao order by u.nome;
 
 -- metrica gráfica
-select c.nomeClasse as 'Classe', count(*) as votos from usuario u join classe c on u.fkClasse = c.idClasse group by c.nomeClasse;
+select c.nomeClasse as 'Classe', count(*) as votos from usuario u join classe c on u.fkClasse = c.idClasse group by c.fkfuncao order by c.idclasse;
+
+insert into usuario values 
+(null,'Juan','juan@gmail.com', sha2('12345678',256), 3);
+(null,'marta','marta@gmail.com', sha2('12345678',256), 3),
+(null,'jaqueline','jaqueline@gmail.com', sha2('12345678',256), 3),
+(null,'valdemir','valdemir@gmail.com', sha2('12345678',256), 3 );

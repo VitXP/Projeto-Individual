@@ -61,7 +61,7 @@ function cadastrar() {
     }
 
     if (apelido_Conter) {
-        res_ap_a.innerHTML = `Seu apelido deve conter até 10 caracteres`
+        res_ap_a.innerHTML = `O apelido deve conter até 10 caracteres`
     }
 
     if (emailVar == "") {
@@ -69,7 +69,7 @@ function cadastrar() {
     }
 
     if (arroba) {
-        res_ap_e.innerHTML = `Seu e-mail deve conter @`
+        res_ap_e.innerHTML = `O e-mail deve conter @`
     }
 
     if (senhaVar == "") {
@@ -77,7 +77,7 @@ function cadastrar() {
     }
 
     if (senha_oito || senha_conter) {
-        res_ap_s.innerHTML = `Sua senha deve conter entre 8 a 12 caracteres`
+        res_ap_s.innerHTML = `A senha deve conter entre 8 a 12 caracteres`
     }
 
     if (confirmacaoSenhaVar == "") {
