@@ -2,7 +2,7 @@ function exibir() {
     var classe = caixa_classe.value
 
     resultado_imagem.innerHTML = ``;
-    
+
     if (classe == '0') {
     } else if (classe == '1') {
         resultado_imagem.innerHTML = `<div><img class="imganimacao" src="./Img/SupportIcon.webp" alt="suporte"></div>`

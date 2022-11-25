@@ -176,7 +176,7 @@ button:hover {
 }
 
 
-.resultado-invalido  {
+.resultado-invalido {
     font-family: 'Chivo', sans-serif;
     font-size: 15px;
     color: rgb(255, 0, 0);
@@ -187,6 +187,7 @@ button:hover {
     display: flex;
     justify-content: center;
 }
+
 #div_erros_login {
     font-family: 'Chivo', sans-serif;
     font-size: 18px;
@@ -201,14 +202,14 @@ button:hover {
     width: 50px;
     margin: auto;
     display: none;
-  }
-  
-  .loading-div img {
+}
+
+.loading-div img {
     height: 50px;
     width: 50px;
-  }
+}
 
-  
+
 /* Footer */
 
 .divisao-footer {

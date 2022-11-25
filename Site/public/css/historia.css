@@ -174,7 +174,7 @@ nav {
 
 button:hover {
     transform: scale(1.10);
-    cursor:default;
+    cursor: default;
 }
 
 button {
