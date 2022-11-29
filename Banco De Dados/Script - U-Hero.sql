@@ -43,7 +43,6 @@ insert into classe values
 (null,'dano',2),
 (null,'tanque',3);
 
-
 -- Selecionar tabelas
 select * from usuario;
 select * from classe;

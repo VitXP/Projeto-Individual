@@ -164,15 +164,59 @@ button {
     box-shadow: inset 0 0 0 100px #ff5e00;
 }
 
-/* Home */
 
+
+/* caixa */
+
+.alinhar-caixa {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10vh;
+    margin-bottom: 8vh;
+}
+
+.caixa_calcular {
+    width: 172px;
+    height: 159px;
+    margin-top: 8.60vh;
+    border-radius: 20px;
+    background: white;
+}
+
+
+.alinhar-dentro-caixa {
+    align-items: center;
+    margin-top: 4vh;
+    text-align: center;
+}
+
+.caixa_calcular {
+    background: white;
+
+}
+
+.caixa_calcular:hover {
+    transform: scale(1.20);
+
+}
+
+.caixa_calcular  {
+    text-decoration: none;
+    border: none;
+    border-radius: 20px;
+    transition: .1s ease;
+}
+
+
+/* Home */
 
 .background-2 {
     background: no-repeat;
     background: linear-gradient(180deg, rgba(116, 163, 160, 0.947917) 0%, #487B78 99.96%, rgba(255, 255, 255, 0) 99.97%, rgba(118, 170, 167, 0.978031) 99.98%, rgba(0, 0, 0, 0.839358) 99.99%, rgba(95, 88, 88, 0) 100%);
     width: 100%;
-    min-height: 79vh;
-    padding-bottom: 4rem;
+    min-height: 18vh;
+    padding-bottom: 1rem;
 }
 
 
@@ -207,7 +251,7 @@ label {
 }
 
 
-button {
+.calcular {
     font-family: 'Chivo', sans-serif;
     width: 20vh;
     height: 8vh;
@@ -227,7 +271,7 @@ button {
     margin-top: 8vh;
 }
 
-button:hover {
+.calcular:hover {
     color: white;
     box-shadow: inset 0 0 0 100px #69cab8;
 }
